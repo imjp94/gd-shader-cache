@@ -90,7 +90,7 @@ After countless trials and errors, here's my findings:
 "Deep caching":
 
 - Materials that lives in keyframes of `AnimationPlayer`
-- Recursively caching for all script variables with type of `PackedScene`
+- Recursively caching for all exported script variables with type of `PackedScene`, for example, `export(PackedScene) var scene_to_cache`
 
 > Note: Materials with `local_to_scene` as true, will lost its reference to the original material. The cache will works without any problem, but now the cache has to be re-generated everytime the original material is updated.
 
